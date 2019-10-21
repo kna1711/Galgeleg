@@ -1,4 +1,4 @@
-package galgeleg;
+package logic;
 
 public class BenytGalgelogik {
 
