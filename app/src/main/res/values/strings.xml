@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">Galgeleg</string>
+<!--    Player information-->
+    <string name="letters_guessed">You\'ve guessed on:\n %1$s</string>
+    <string name="lost_game">Aw, you didn\'t find the word fast enough\nThe word was: %1$s</string>
+    <string name="won_game">Congratulations! You won the game!</string>
+    <string name="perfect_game">Well played, a perfect game!</string>
+<!--    Game button-->
+    <string name="btn_guess">Guess</string>
+    <string name="btn_play_again">Play Again</string>
 </resources>
