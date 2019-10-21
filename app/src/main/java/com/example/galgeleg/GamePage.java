@@ -51,7 +51,7 @@ public class GamePage extends AppCompatActivity {
     private void updateView() {
         hangman.setImageResource(pics[game.getAntalForkerteBogstaver()]);
         word.setText(game.getSynligtOrd());
-        letters.setText(getString(R.string.letters_guessed, game.getBrugteBogstaver().toString())); //FixMe Complains about android resource because of game. reference
+        letters.setText(getString(R.string.letters_guessed, game.getBrugteBogstaver().toString()));
     }
 
     public void guessBtnPress(View view) {
@@ -74,7 +74,7 @@ public class GamePage extends AppCompatActivity {
     private void controlGameState() {
         if (game.erSpilletTabt()) {
             gameBtn.setText(R.string.btn_play_again);
-            letters.setText(getString(R.string.lost_game, game.getOrdet())); //FixMe Complains about android resource because of game. reference
+            letters.setText(getString(R.string.lost_game, game.getOrdet()));
         } else if (game.erSpilletVundet()) {
             gameBtn.setText(R.string.btn_play_again);
             letters.setText(R.string.won_game);
