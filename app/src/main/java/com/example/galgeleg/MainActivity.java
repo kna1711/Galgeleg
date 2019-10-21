@@ -1,3 +1,4 @@
+//https://github.com/kna1711/Galgeleg
 package com.example.galgeleg;
 
 import androidx.appcompat.app.AppCompatActivity;
