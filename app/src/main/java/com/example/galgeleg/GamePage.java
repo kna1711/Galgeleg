@@ -74,7 +74,7 @@ public class GamePage extends AppCompatActivity {
     private void controlGameState() {
         if (game.erSpilletTabt()) {
             gameBtn.setText(R.string.btn_play_again);
-            letters.setText(getString(R.string.lost_game, game.getOrdet()));
+            letters.setText(getString(R.string.lost_game, game.getOrdet())); //TODO Create and use a communication TextView
         } else if (game.erSpilletVundet()) {
             gameBtn.setText(R.string.btn_play_again);
             letters.setText(R.string.won_game);
