@@ -68,15 +68,15 @@ public class GamePage extends AppCompatActivity {
 //                //TODO Tell them to try new letters and only one at a time
 //            }
         }
-        letterGuess.setText("");
+        letterGuess.setText(""); //Alternatively use letterGuess.getText().clear()
     }
 
     private void controlGameState() {
         if (game.erSpilletTabt()) {
             endScreen(getString(R.string.lost_game, game.getOrdet()));
         } else if (game.erSpilletVundet()) {
-            if(game.getAntalForkerteBogstaver() == 0) endScreen(getString(R.string.perfect_game));
-            else endScreen(getString(R.string.won_game));
+            String winningMsg = (game.getAntalForkerteBogstaver() == 0) ? getString(R.string.perfect_game) : getString(R.string.won_game);
+            endScreen(winningMsg);
         }
     }
 
