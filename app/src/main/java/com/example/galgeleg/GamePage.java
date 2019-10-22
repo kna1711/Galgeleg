@@ -43,7 +43,8 @@ public class GamePage extends AppCompatActivity {
     }
 
     private void newGame() {
-        game = new Galgelogik(); //TODO Move to instantiate and use game.nulstil
+        if(game == null) game = new Galgelogik();
+        else game.nulstil();
         gameBtn.setText(R.string.btn_guess);
         updateView();
     }
