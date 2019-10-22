@@ -30,11 +30,11 @@ public class GamePage extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game_page);
 
-        instanciateGlobals();
+        instantiateGlobals();
         newGame();
     }
 
-    private void instanciateGlobals() {
+    private void instantiateGlobals() {
         hangman = findViewById(R.id.hangman);
         word = findViewById(R.id.wordView);
         letters = findViewById(R.id.lettersView);
@@ -43,7 +43,7 @@ public class GamePage extends AppCompatActivity {
     }
 
     private void newGame() {
-        game = new Galgelogik();
+        game = new Galgelogik(); //TODO Move to instantiate and use game.nulstil
         gameBtn.setText(R.string.btn_guess);
         updateView();
     }
@@ -73,12 +73,15 @@ public class GamePage extends AppCompatActivity {
 
     private void controlGameState() {
         if (game.erSpilletTabt()) {
-            gameBtn.setText(R.string.btn_play_again);
-            letters.setText(getString(R.string.lost_game, game.getOrdet())); //TODO Create and use a communication TextView
+            endScreen(getString(R.string.lost_game, game.getOrdet()));
         } else if (game.erSpilletVundet()) {
-            gameBtn.setText(R.string.btn_play_again);
-            letters.setText(R.string.won_game);
-            if (game.getAntalForkerteBogstaver() == 0) letters.setText(R.string.perfect_game);
+            if(game.getAntalForkerteBogstaver() == 0) endScreen(getString(R.string.perfect_game));
+            else endScreen(getString(R.string.won_game));
         }
+    }
+
+    private void endScreen(String msg) {
+        gameBtn.setText(R.string.btn_play_again);
+        letters.setText(msg); //TODO Consider creating and use a communication TextView
     }
 }
