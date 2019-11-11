@@ -12,13 +12,14 @@ import java.util.Random;
 public class Galgelogik {
   /** AHT afprøvning er muligeOrd synlig på pakkeniveau */
   ArrayList<String> muligeOrd = new ArrayList<String>();
-  private String ordet;
+  private String brugerNavn, ordet;
   private ArrayList<String> brugteBogstaver = new ArrayList<String>();
   private String synligtOrd;
   private int antalForkerteBogstaver;
   private boolean sidsteBogstavVarKorrekt;
   private boolean spilletErVundet;
   private boolean spilletErTabt;
+
 
   public Galgelogik() {
     muligeOrd.add("bil");
@@ -197,5 +198,9 @@ public class Galgelogik {
 
     System.out.println("muligeOrd = " + muligeOrd);
     nulstil();
+  }
+
+  public void setBrugerNavn(String brugerNavn) {
+    this.brugerNavn = brugerNavn;
   }
 }
