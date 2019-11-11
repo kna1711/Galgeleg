@@ -108,4 +108,8 @@ public class GamePage extends AppCompatActivity {
         gameBtn.setText(R.string.btn_play_again);
         letters.setText(msg); //TODO Consider creating and use a communication TextView
     }
+
+    public void showHighScore(View view) {
+        startActivity(new Intent(this, HighScorePage.class));
+    }
 }

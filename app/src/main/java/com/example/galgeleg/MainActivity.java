@@ -23,4 +23,8 @@ public class MainActivity extends AppCompatActivity {
         intent.putExtra("brugerNavn", userNameField.getText().toString());
         startActivity(intent);
     }
+
+    public void showHighScore(View view) {
+        startActivity(new Intent(this, HighScorePage.class));
+    }
 }

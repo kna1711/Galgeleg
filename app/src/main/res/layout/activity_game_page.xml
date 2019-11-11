@@ -62,10 +62,11 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/helpBtn"
+        android:id="@+id/highscoreBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="HELP"
+        android:onClick="showHighScore"
+        android:text="HIGHSCORE"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
