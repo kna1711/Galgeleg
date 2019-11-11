@@ -19,9 +19,11 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void startGame(View view) {
-        Intent intent = new Intent(this, GamePage.class);
-        intent.putExtra("brugerNavn", userNameField.getText().toString());
-        startActivity(intent);
+        if(!userNameField.getText().toString().equals("")) {
+            Intent intent = new Intent(this, GamePage.class);
+            intent.putExtra("brugerNavn", userNameField.getText().toString());
+            startActivity(intent);
+        } else userNameField.setHint(R.string.user_name_prompt);
     }
 
     public void showHighScore(View view) {

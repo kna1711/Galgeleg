@@ -8,4 +8,5 @@
     <!--    Game button-->
     <string name="btn_guess">Guess</string>
     <string name="btn_play_again">Play Again</string>
+    <string name="user_name_prompt">You must write a username</string>
 </resources>
